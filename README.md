@@ -9,10 +9,6 @@ CSS3
 
 JavaScript
 
-📸 Preview
-
-Adicione uma imagem ou GIF mostrando como a página funciona.
-
 
 
 📂 Como Clonar e Executar
