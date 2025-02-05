@@ -4,16 +4,16 @@ const sections = document.querySelectorAll(".profile-section"); // Seleciona tod
 let activeIndex = 0; // Começa com a primeira seção visível (Professional)
 
 function toggleSections() {
-  // Oculta a seção ativa
-  sections[activeIndex].classList.remove("active");
+	// Oculta a seção ativa
+	sections[activeIndex].classList.remove("active");
 
-  // Alterna para a próxima seção
-  activeIndex = (activeIndex + 1) % sections.length; // Alterna entre 0 e 1
-  sections[activeIndex].classList.add("active");
+	// Alterna para a próxima seção
+	activeIndex = (activeIndex + 1) % sections.length; // Alterna entre 0 e 1
+	sections[activeIndex].classList.add("active");
 
-  // Alterna a classe do botão para mover a chave
-  toggleButton.classList.toggle("professional");
-  toggleButton.classList.toggle("personal");
+	// Alterna a classe do botão para mover a chave
+	toggleButton.classList.toggle("professional");
+	toggleButton.classList.toggle("personal");
 }
 
 // Garante que a primeira seção (Professional) inicie visível
