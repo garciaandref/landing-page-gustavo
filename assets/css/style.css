@@ -633,28 +633,76 @@ a {
   width: 100%;
 }
 
-.box-skills {
+/*****PESSOAL*****/
+.skills-persona {
+  width: 80%;
+  margin: 0 auto;
+  padding: 7rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-skills-persona {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headline-skills-persona {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-headline-skills-persona h2 {
+  font-family: var(--font-grande);
+  font-size: 3rem;
+}
+
+.text-headline-skills-persona p {
+  font-size: 1.5rem;
+  color: var(--color-gray2);
+  font-weight: 500;
+  line-height: 1.4;
+  max-width: 900px;
+}
+
+.conteudo-skills-persona {
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+}
+
+.box-skills-persona {
   border: 1px solid hsla(0, 0%, 100%, 0.15);
   border-radius: 20px;
   color: var(--color-white);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 450px;
+  height: auto;
   padding: 2rem;
   gap: 1.5rem;
 }
 
-.box-skills i {
+.box-skills-persona i {
   font-size: 4rem;
   color: var(--color-white);
 }
 
-.box-skills h3 {
+.box-skills-persona h3 {
   font-size: 1.8rem;
 }
 
-.box-skills p {
+.box-skills-persona p {
   color: var(--color-gray2);
   font-size: 1.2rem;
   font-weight: 500;
