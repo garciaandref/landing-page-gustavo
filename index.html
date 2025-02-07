@@ -28,8 +28,11 @@
 	<!-- AOS -->
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-	<!-- LOCOMOTIVE SCROLL -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css" />
+	<!-- SWIPER.JS -->
+	<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
 
 
 </head>
@@ -476,69 +479,84 @@
 				</div>
 			</section>
 			<!--Fim Skills-->
-			<!-- COMENTARIOS -->
+			 <!-- COMENTARIOS -->
 			<section id="comentarios" class="comentarios-pessoal">
-				<div class="carousel">
-					<div class="carousel-track">
+				<h2 class="titulo-comentarios">O que dizem sobre o Gustavo</h2>
+				<div class="swiper">
+					<div class="swiper-wrapper">
 						<!-- CARD 1 -->
-						<div class="box-artigo">
+						<div class="swiper-slide box-artigo">
 							<figure class="profile">
 								<div class="autor">
 									<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsu5fK6fu0D8IJnQXecAM6KNhWtHtI2i3ZMA&s" title="Loop Nerd" alt="Profile" />
-									<h5>Seu nome</h5><span>Parentesco</span>
 								</div>
-								<blockquote>
-									Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-									printer took a galley of type and scrambled it to make a type specimen book.
-								</blockquote>
 							</figure>
+							<div class="text-content">
+								<i class="bi bi-quote"></i>
+								<div class="text">
+									<p>
+										Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+										printer took a galley of type and scrambled it to make a type specimen book.
+									</p>
+									<h5>&#8212; Seu nome</h5>
+									<span>Parentesco</span>
+								</div>
+								<i class="bi bi-quote"></i>
+							</div>
 						</div>
-						<!-- CARD 2 -->
-						<div class="box-artigo">
+
+						<div class="swiper-slide box-artigo">
 							<figure class="profile">
 								<div class="autor">
 									<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsu5fK6fu0D8IJnQXecAM6KNhWtHtI2i3ZMA&s" title="Loop Nerd" alt="Profile" />
-									<h5>Seu nome</h5><span>Parentesco</span>
 								</div>
-								<blockquote>
-									Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-									printer took a galley of type and scrambled it to make a type specimen book.
-								</blockquote>
 							</figure>
+							<div class="text-content">
+								<i class="bi bi-quote"></i>
+								<div class="text">
+									<p>
+										Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+										printer took a galley of type and scrambled it to make a type specimen book.
+									</p>
+									<h5>&#8212; Seu nome</h5>
+									<span>Parentesco</span>
+								</div>
+								<i class="bi bi-quote"></i>
+							</div>
 						</div>
-						<!-- CARD 3 -->
-						<div class="box-artigo">
+
+						<div class="swiper-slide box-artigo">
 							<figure class="profile">
 								<div class="autor">
 									<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsu5fK6fu0D8IJnQXecAM6KNhWtHtI2i3ZMA&s" title="Loop Nerd" alt="Profile" />
-									<h5>Seu nome</h5><span>Parentesco</span>
 								</div>
-								<blockquote>
-									Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-									printer took a galley of type and scrambled it to make a type specimen book.
-								</blockquote>
 							</figure>
-						</div>
-						<!-- CARD 4 -->
-						<div class="box-artigo">
-							<figure class="profile">
-								<div class="autor">
-									<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsu5fK6fu0D8IJnQXecAM6KNhWtHtI2i3ZMA&s" title="Loop Nerd" alt="Profile" />
-									<h5>Seu nome</h5><span>Parentesco</span>
+							<div class="text-content">
+								<i class="bi bi-quote"></i>
+								<div class="text">
+									<p>
+										Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+										printer took a galley of type and scrambled it to make a type specimen book.
+									</p>
+									<h5>&#8212; Seu nome</h5>
+									<span>Parentesco</span>
 								</div>
-								<blockquote>
-									Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-									printer took a galley of type and scrambled it to make a type specimen book.
-								</blockquote>
-							</figure>
+								<i class="bi bi-quote"></i>
+							</div>
 						</div>
 					</div>
+
+					
+
+					<!-- If we need pagination -->
+					<div class="swiper-pagination"></div>
 				</div>
 			</section>
 			<!-- FIM COMENTARIOS -->
 
 		</section>
 		<!-- FIM SECTION PERSONAL -->
+		
 		<!--Contato--><!--Fim Contato-->
 
 		<!--Footer-->
@@ -583,6 +601,9 @@
 		</footer>
 		<!--Fim Footer-->
 	</div>
+	
+	<!-- Swiper.js -->
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
@@ -593,66 +614,36 @@
 	<script>
 		AOS.init();
 
+		
+  // Inicialização do Swiper
+	const swiper = new Swiper('.swiper', {
+    direction: 'horizontal',
+    loop: true,
+    autoplay: { delay: 3000 },
+    centeredSlides: true,
+    slidesPerView: 'auto',
+
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    scrollbar: {
+        el: '.swiper-scrollbar',
+    },
+	});
+
+	// Ajuste automático de ano no rodapé
 		const yearElement = document.getElementById('current-year');
 		const currentYear = new Date().getFullYear();
 
 		yearElement.textContent = currentYear;
 	</script>
-
-	<!-- GSAP e ScrollTrigger -->
-	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-
-	<!-- Locomotive Scroll -->
-	<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
-
-	<!-- CARROSSEL -->
-	<script>
-		  const track = document.querySelector('.carousel-track');
-        const cards = document.querySelectorAll('.box-artigo');
-        const totalCards = cards.length;
-        let index = 0;
-        let isDragging = false;
-        let startX, scrollLeft;
-
-        function moveNext() {
-            index++;
-            if (index >= totalCards - 2) {
-                index = 0;
-                track.style.transition = 'none';
-                track.style.transform = `translateX(0px)`;
-                setTimeout(() => {
-                    track.style.transition = 'transform 0.5s ease-in-out';
-                }, 50);
-            } else {
-                track.style.transform = `translateX(-${index * (100 / 3)}%)`;
-            }
-        }
-
-        setInterval(moveNext, 2000);
-
-        track.addEventListener('mousedown', (e) => {
-            isDragging = true;
-            startX = e.pageX - track.offsetLeft;
-            scrollLeft = track.scrollLeft;
-        });
-
-        track.addEventListener('mouseleave', () => {
-            isDragging = false;
-        });
-
-        track.addEventListener('mouseup', () => {
-            isDragging = false;
-        });
-
-        track.addEventListener('mousemove', (e) => {
-            if (!isDragging) return;
-            e.preventDefault();
-            const x = e.pageX - track.offsetLeft;
-            const walk = (x - startX) * 1.5; 
-            track.scrollLeft = scrollLeft - walk;
-        });
-</script>
 
 	<!--JavaScript-->
 
