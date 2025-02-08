@@ -549,8 +549,8 @@ a {
 }
 
 .imagem-sobre-profesional img {
-  width: 300px;
-  margin-top: 200px;
+  width: 420px;
+  margin-top: 100px;
 }
 
 @media screen and (max-width: 768px) {
