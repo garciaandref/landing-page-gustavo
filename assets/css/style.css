@@ -549,8 +549,8 @@ a {
 }
 
 .imagem-sobre-profesional img {
-  width: 300px;
-  margin-top: 200px;
+  width: 420px;
+  margin-top: 100px;
 }
 
 @media screen and (max-width: 768px) {
@@ -1778,6 +1778,15 @@ ul li .descr::before {
   border-radius: 14px;
   cursor: pointer;
   margin-top: 20px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-article:hover{
+  background-color: #364898
+}
+
+.btn-article a:hover{
+  color: var(--color-white);
 }
 
 .redes-sociais {
@@ -1820,6 +1829,7 @@ ul li .descr::before {
 .btn-article a {
   color: var(--color-black);
   font-weight: bold;
+  transition: color 0.3s ease-in-out;
 }
 
 .texto .autor {
@@ -1828,6 +1838,8 @@ ul li .descr::before {
   font-weight: bold;
   color: var(--color-black);
 }
+
+
 
 .animated {
   opacity: 0;
@@ -1917,6 +1929,12 @@ ul li .descr::before {
   padding: 8rem 0;
 }
 
+@media (max-width: 768px) {
+  .comentarios-pessoal {
+    width: 120vw;
+  }
+}
+
 .swiper {
   width: 80%;
   height: 100%;
@@ -1953,10 +1971,19 @@ ul li .descr::before {
   text-align: center;
   padding: 2rem;
   margin: 2rem;
+  min-height: 830px;
+}
+
+@media (max-width: 768px) {
+  .box-artigo{
+    flex-direction: column;
+    width: 340px;
+  }
 }
 
 .box-artigo .profile .autor img {
-  width: 11.25rem;
+  width: 12rem;
+  height: 12rem;
   margin-left: 2rem;
   border-radius: 50%;
   object-fit: cover;
@@ -2116,15 +2143,15 @@ ul li .descr::before {
 }
 
 .card-about:nth-of-type(1) .image-container {
-  background-image: url("https://static.addtoany.com/images/dracaena-cinnabari.jpg");
+  background-image: url("/assets/img/logos/argonne.svg");
 }
 
 .card-about:nth-of-type(2) .image-container {
-  background-image: url("https://www.w3schools.com/w3css/img_lights.jpg");
+  background-image: url("/assets/img/logos/logo-icp-csic.png");
 }
 
 .card-about:nth-of-type(3) .image-container {
-  background-image: url("https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+  background-image: url("/assets/img/logos/soleil.png");
 }
 .card-about:nth-of-type(4) .image-container {
   background-image: url("https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
@@ -2138,6 +2165,7 @@ ul li .descr::before {
   height: 8em;
   position: relative;
   background-size: cover;
+  background-repeat: no-repeat;
   margin-bottom: 2em;
   border-radius: 100%;
   padding: 1em;
