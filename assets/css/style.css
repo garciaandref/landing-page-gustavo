@@ -526,6 +526,12 @@ a {
 	font-family: var(--font-grande);
 }
 
+.profile-personal .textos-sobre h2 {
+	color: var(--color-white);
+	width: 100%;
+	padding: 0 1rem 1rem;
+}
+
 @media screen and (max-width: 768px) {
 	.textos-sobre h2 {
 		font-size: 2.5rem;
@@ -540,6 +546,12 @@ a {
 	font-weight: 500;
 	line-height: 1.4;
 	letter-spacing: 1.5px;
+}
+
+.profile-personal .textos-sobre p {
+	width: 100%;
+	padding: 0 1rem 1rem;
+	text-align: center;
 }
 
 .redes-sociais {
@@ -560,6 +572,11 @@ a {
 	width: 100%;
 	padding-bottom: 5px;
 	border-bottom: 1px solid hsla(0, 0%, 100%, 0.15);
+	transition: all 0.3s ease-in-out;
+}
+
+.redes-sociais a:hover {
+	color: var(--color-destaque1);
 }
 
 .right-sobre {
@@ -1030,9 +1047,15 @@ a {
 	background-color: var(--color-white);
 	color: var(--color-black);
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding: 7rem 0rem 7rem 0rem;
+	padding: 4rem 0rem 7rem 0rem;
+}
+
+.timeline-container h2 {
+	font-size: 3rem;
+	margin-bottom: 5rem;
 }
 
 .timeline {
@@ -1757,6 +1780,8 @@ ul li .descr::before {
 }
 
 .titulo-comentarios {
+	width: 100%;
+	padding: 0 1rem;
 	text-align: center;
 	font-size: 2.5rem;
 	margin-bottom: 2rem;
@@ -2003,17 +2028,19 @@ ul li .descr::before {
 	display: flex !important;
 	align-items: center !important;
 	background: var(--color-black);
-	border-radius: 12px;
+	border-radius: 25px;
 	text-align: center;
 	padding: 2rem;
 	margin: 2rem;
 	min-height: 830px;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 	.box-artigo {
 		flex-direction: column;
-		width: 340px;
+		width: 100%;
+		padding: 1rem;
+		min-height: 540px;
 	}
 }
 
@@ -2026,15 +2053,37 @@ ul li .descr::before {
 	border: 4px solid var(--color-destaque1);
 }
 
+@media screen and (max-width: 768px) {
+	.box-artigo .profile .autor {
+		padding-top: 2rem;
+	}
+
+	.box-artigo .text-content {
+		padding-bottom: 2rem;
+	}
+}
+
 .box-artigo .text-content {
 	display: flex;
 	flex-direction: column;
 	padding: 3rem 4rem;
 }
 
+@media screen and (max-width: 768px) {
+	.box-artigo .text-content {
+		padding: 0.5rem;
+	}
+}
+
 .box-artigo .text-content .bi-quote {
 	font-size: 4rem;
 	color: var(--color-destaque1);
+}
+
+@media screen and (max-width: 768px) {
+	.box-artigo .text-content .bi-quote {
+		font-size: 2rem;
+	}
 }
 
 .box-artigo .text-content .bi-quote:first-child {
@@ -2055,9 +2104,21 @@ ul li .descr::before {
 	margin: 2rem 4rem;
 }
 
+@media screen and (max-width: 768px) {
+	.box-artigo .text-content .text {
+		margin: 0.5rem;
+	}
+}
+
 .box-artigo .text-content .text p {
 	font-size: 2rem;
 	margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+	.box-artigo .text-content .text p {
+		font-size: 1rem;
+	}
 }
 
 .box-artigo .text-content .text h5 {
