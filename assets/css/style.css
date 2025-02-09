@@ -38,6 +38,10 @@
 	background-color: var(--color-gray2);
 }
 
+::selection {
+	background-color: var(--color-destaque1);
+}
+
 html {
 	scroll-behavior: smooth;
 	overflow-x: hidden;
@@ -61,6 +65,11 @@ li {
 
 a {
 	text-decoration: none;
+}
+
+img {
+	width: 100%;
+	object-fit: cover;
 }
 
 /*Botões fixos*/
@@ -528,8 +537,6 @@ a {
 
 .profile-personal .textos-sobre h2 {
 	color: var(--color-white);
-	width: 100%;
-	padding: 0 1rem 1rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -537,6 +544,17 @@ a {
 		font-size: 2.5rem;
 		text-align: center;
 		padding-bottom: 2rem;
+	}
+
+	.profile-personal .textos-sobre p {
+		width: 100%;
+		padding: 0 1rem 1rem;
+		text-align: center;
+	}
+
+	.profile-personal .textos-sobre h2 {
+		width: 100%;
+		padding: 0 1rem 1rem;
 	}
 }
 
@@ -546,12 +564,6 @@ a {
 	font-weight: 500;
 	line-height: 1.4;
 	letter-spacing: 1.5px;
-}
-
-.profile-personal .textos-sobre p {
-	width: 100%;
-	padding: 0 1rem 1rem;
-	text-align: center;
 }
 
 .redes-sociais {
@@ -802,19 +814,50 @@ a {
 	border-radius: 20px;
 	color: var(--color-white);
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
 	height: auto;
 	padding: 2rem;
 	gap: 1.5rem;
 }
 
-.box-skills-persona i {
-	font-size: 4rem;
-	color: var(--color-white);
+.box-skills-persona:nth-child(even) {
+	flex-direction: row-reverse;
 }
 
-.box-skills-persona h3 {
+@media screen and (max-width: 768px) {
+	.box-skills-persona {
+		flex-direction: column;
+		width: 100%;
+		padding: 0 1rem;
+	}
+
+	.box-skills-persona:nth-child(even) {
+		flex-direction: column;
+	}
+
+	.box-skills-persona p {
+		padding-bottom: 2rem;
+	}
+}
+
+.box-skills-persona img {
+	width: 100%;
+	height: auto;
+}
+
+.box-skills-persona i {
+	font-size: 3rem;
+	color: var(--color-destaque1);
+}
+
+.text-headline-skills {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 1rem;
+}
+
+.text-headline-skills h3 {
 	font-size: 1.8rem;
 }
 
