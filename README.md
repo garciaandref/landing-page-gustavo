@@ -17,7 +17,6 @@ Uma landing page moderna e responsiva construída com HTML, CSS e JavaScript.
 
 - Layout responsivo para diferentes dispositivos
 - Animações suaves com CSS e JS
-- Formulário de captura de leads
 - Scroll suave para seções da página
 
 ## 📂 Estrutura do Projeto
