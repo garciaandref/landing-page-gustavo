@@ -40,6 +40,7 @@
 
 html {
 	scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 
 body {
@@ -432,6 +433,12 @@ a {
 	align-items: center;
 }
 
+@media screen and (max-width: 768px) {
+	.container-sobre {
+		width: 100%;
+	}
+}
+
 .headline-sobre {
 	height: 30%;
 	width: 100vw;
@@ -514,9 +521,17 @@ a {
 	gap: 3rem;
 }
 
-.textos-sobre h1 {
+.textos-sobre h2 {
 	font-size: 3rem;
 	font-family: var(--font-grande);
+}
+
+@media screen and (max-width: 768px) {
+	.textos-sobre h2 {
+		font-size: 2.5rem;
+		text-align: center;
+		padding-bottom: 2rem;
+	}
 }
 
 .textos-sobre p {
@@ -562,7 +577,8 @@ a {
 }
 
 .imagem-sobre-profesional img {
-	width: 420px;
+	max-width: 420px;
+	width: 100%;
 	margin-top: 100px;
 }
 
@@ -621,6 +637,12 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+	.skills {
+		width: 100%;
+	}
 }
 
 .container-skills {
@@ -1021,6 +1043,7 @@ a {
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
+	padding: 0 1rem;
 }
 
 .timeline ul {
@@ -1733,12 +1756,6 @@ ul li .descr::before {
 	padding: 0 20px;
 }
 
-@media screen and (max-width: 768px) {
-	.container-comentarios {
-		width: 80%;
-	}
-}
-
 .titulo-comentarios {
 	text-align: center;
 	font-size: 2.5rem;
@@ -2138,7 +2155,7 @@ ul li .descr::before {
 }
 
 .card-about-carousel .card-about {
-	background: whitesmoke;
+	background: var(--color-white);
 	width: var(--card-width);
 	max-width: var(--card-max-width);
 	text-align: center;
