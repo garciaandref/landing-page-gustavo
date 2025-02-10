@@ -602,6 +602,10 @@ img {
   align-items: center;
 }
 
+.align-pessoal {
+  padding: 0 2rem;
+}
+
 .imagem-sobre-profesional img {
   max-width: 420px;
   width: 100%;
