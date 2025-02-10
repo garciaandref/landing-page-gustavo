@@ -602,6 +602,10 @@ img {
   align-items: center;
 }
 
+.align-pessoal {
+  padding: 0 2rem;
+}
+
 .imagem-sobre-profesional img {
   max-width: 420px;
   width: 100%;
@@ -842,7 +846,7 @@ img {
 }
 
 .box-skills-persona img {
-  width: 50%;
+  width: 500px;
   height: 450px;
   border-radius: 25px;
 }
@@ -852,7 +856,7 @@ img {
     width: 100%;
     height: auto;
     object-fit: contain;
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 }
 
