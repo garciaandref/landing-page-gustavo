@@ -509,6 +509,10 @@ img {
 	display: flex;
 }
 
+.conteudo-sobre-alinhador {
+	align-items: center;
+}
+
 .conteudo-sobre-reverse {
 	position: relative;
 	top: 30%;
@@ -605,10 +609,16 @@ img {
 	align-items: center;
 }
 
+.align-pessoal {
+	padding: 0 2rem;
+}
+
 .imagem-sobre-profesional img {
 	max-width: 420px;
 	width: 100%;
 	margin-top: 100px;
+	border: 5px solid var(--color-white);
+	border-radius: 15px;
 }
 
 @media screen and (max-width: 768px) {
@@ -811,8 +821,6 @@ img {
 
 .box-skills-persona {
 	border: 1px solid hsla(0, 0%, 100%, 0.15);
-	width: 100%;
-	max-width: 1180px;
 	border-radius: 20px;
 	color: var(--color-white);
 	display: flex;
@@ -820,10 +828,12 @@ img {
 	height: auto;
 	padding: 2rem;
 	gap: 1.5rem;
+	align: center;
 }
 
 .box-skills-persona:nth-child(even) {
 	flex-direction: row-reverse;
+	align: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -843,8 +853,18 @@ img {
 }
 
 .box-skills-persona img {
-	width: 100%;
-	height: auto;
+	width: 500px;
+	height: 450px;
+	border-radius: 25px;
+}
+
+@media screen and (max-width: 768px) {
+	.box-skills-persona img {
+		width: 100%;
+		height: auto;
+		object-fit: contain;
+		margin-top: 1rem;
+	}
 }
 
 .box-skills-persona i {
