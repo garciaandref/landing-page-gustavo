@@ -811,6 +811,8 @@ img {
 
 .box-skills-persona {
 	border: 1px solid hsla(0, 0%, 100%, 0.15);
+	width: 100%;
+	max-width: 1180px;
 	border-radius: 20px;
 	color: var(--color-white);
 	display: flex;
