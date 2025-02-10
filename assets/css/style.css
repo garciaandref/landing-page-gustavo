@@ -262,6 +262,12 @@ img {
 		opacity 0.5s ease-in-out;
 }
 
+@media screen and (max-width: 768px) {
+	.nav-menu a {
+		font-size: 1.5rem;
+	}
+}
+
 .menu-aberto.active .nav-menu a {
 	opacity: 1;
 	transform: translateY(0);
@@ -828,12 +834,12 @@ img {
 	height: auto;
 	padding: 2rem;
 	gap: 1.5rem;
-	align: center;
+	width: 100%;
+	max-width: 1180px;
 }
 
 .box-skills-persona:nth-child(even) {
 	flex-direction: row-reverse;
-	align: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -2301,6 +2307,11 @@ ul li .descr::before {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	cursor: grab;
+}
+
+.card-about-carousel .card-about:active {
+	cursor: grabbing;
 }
 
 .card-about.highlight {
