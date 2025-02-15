@@ -2152,7 +2152,7 @@ ul li .descr::before {
   transform: rotate(180deg);
 }
 
-.swiper-depoimentos .box-artigo .text-content .text {
+.box-artigo .text-content .text {
   color: var(--color-white);
   display: flex;
   flex-direction: column;
@@ -2162,23 +2162,23 @@ ul li .descr::before {
 }
 
 @media screen and (max-width: 768px) {
-  .swiper-depoimentos .box-artigo .text-content .text {
+  .box-artigo .text-content .text {
     margin: 0.5rem;
   }
 }
 
-.swiper-depoimentos .box-artigo .text-content .text p {
+.box-artigo .text-content .text p {
   font-size: 2rem;
   margin-bottom: 2rem;
 }
 
 @media screen and (max-width: 768px) {
-  .swiper-depoimentos .box-artigo .text-content .text p {
+  .box-artigo .text-content .text p {
     font-size: 1rem;
   }
 }
 
-.swiper-depoimentos .box-artigo .text-content .text h5 {
+.box-artigo .text-content .text h5 {
   font-style: italic;
   font-size: 1.5rem;
   margin-bottom: 0.25rem;
@@ -2401,6 +2401,7 @@ ul li .descr::before {
   border-radius: 1.3rem;
   background-color: #ffffff;
   display: none;
+  transform: scaleY(0);
   transition: opacity 0.5s ease, height 0.5s ease, transform 0.5s ease;
 }
 
@@ -2417,6 +2418,9 @@ ul li .descr::before {
 .gallery .ticket .image img {
   width: 100%;
   height: 20rem;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  display: block;
 }
 
 .gallery.ticket .info {
@@ -2464,4 +2468,49 @@ ul li .descr::before {
 
 #toggleBtn:hover {
   background-color: #d38700;
+}
+
+/* Estilos do modal */
+.modal-gallery {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-gallery.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-gallery img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.5);
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.modal-gallery.active img {
+  transform: scale(1);
+}
+
+/* Botão para fechar */
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
 }
