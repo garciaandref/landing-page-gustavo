@@ -892,6 +892,12 @@
 
 				</div>
 
+				<!-- Modal para exibir imagem ampliada -->
+<div id="imageModal" class="modal-gallery">
+	<span class="modal-close">&times;</span>
+	<img id="modalImg" src="" alt="Imagem Ampliada">
+</div>
+
 				<button class="btn-gallery" id="toggleBtn" data-aos="fade-up" data-aos-delay="200"
 					data-aos-duration="1000">Mostrar mais</button>
 
@@ -1386,7 +1392,7 @@
 		const swiper = new Swiper('.swiper-depoimentos', {
 			direction: 'horizontal',
 			loop: true,
-			autoplay: { delay: 5000 },
+			autoplay: { delay: 10000 },
 			centeredSlides: true,
 			slidesPerView: 'auto',
 
@@ -1417,8 +1423,12 @@
 		document.addEventListener('DOMContentLoaded', function () {
 			const tickets = document.querySelectorAll('.ticket');
 			const btn = document.getElementById('toggleBtn');
+			const modal = document.getElementById('imageModal');
+			const modalImg = document.getElementById('modalImg');
+			const closeModal = document.querySelector('.modal-close');
 			let visibleCount = 3;
 	
+			
 			tickets.forEach((ticket, index) => {
 				if (index < visibleCount) {
 					ticket.style.height = ticket.scrollHeight + "px";
@@ -1444,6 +1454,7 @@
 						btn.textContent = 'Mostrar menos';
 					}
 				} else {
+					
 					visibleCount = 3;
 					tickets.forEach((ticket, index) => {
 						if (index >= visibleCount) {
@@ -1454,12 +1465,29 @@
 						}
 					});
 	
-					
 					setTimeout(() => {
 						tickets[0].scrollIntoView({ behavior: 'smooth', block: 'start' });
 					}, 500);
 	
 					btn.textContent = 'Mostrar mais';
+				}
+			});
+
+			document.querySelectorAll('.ticket img').forEach(img => {
+				img.addEventListener('click', function () {
+					console.log("Imagem clicada:", this.src);
+					modalImg.src = this.src;
+					modal.classList.add('active'); 
+				});
+			});
+	
+			closeModal.addEventListener('click', function () {
+				modal.classList.remove('active');
+			});
+	
+			modal.addEventListener('click', function (event) {
+				if (event.target === modal) {
+					modal.classList.remove('active');
 				}
 			});
 		});
