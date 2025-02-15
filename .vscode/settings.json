@@ -251,8 +251,6 @@
 		"instrumentos",
 		"inteligente",
 		"interesse",
-		"internacionais",
-		"INTERNACIONAIS",
 		"Inverte",
 		"Irmã",
 		"irmão",
@@ -375,7 +373,6 @@
 		"resgates",
 		"resiliência",
 		"responsabilidade",
-		"rgba",
 		"Ribeiro",
 		"Ricci",
 		"rodapé",
@@ -445,5 +442,6 @@
 		"vidas",
 		"violão",
 		"zeólitas"
-	]
+	],
+	"liveServer.settings.port": 5501
 }
