@@ -2046,13 +2046,13 @@ ul li .descr::before {
   }
 }
 
-.swiper {
+.swiper-depoimentos {
   width: 80%;
   height: 100%;
   padding: 0 2rem;
 }
 
-.swiper-slide {
+.swiper-depoimentos .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
@@ -2063,18 +2063,18 @@ ul li .descr::before {
   user-select: none;
 }
 
-.swiper-slide:active {
+.swiper-depoimentos .swiper-slide:active {
   cursor: grabbing;
 }
 
-.swiper-pagination span {
+.swiper-depoimentos .swiper-pagination span {
   width: 0.625rem;
   height: 0.625rem;
   background-color: var(--color-black);
   cursor: pointer;
 }
 
-.box-artigo {
+.swiper-depoimentos .box-artigo {
   display: flex !important;
   align-items: center !important;
   background: var(--color-black);
@@ -2086,7 +2086,7 @@ ul li .descr::before {
 }
 
 @media screen and (max-width: 768px) {
-  .box-artigo {
+  .swiper-depoimentos .box-artigo {
     flex-direction: column;
     width: 100%;
     padding: 1rem;
@@ -2094,7 +2094,7 @@ ul li .descr::before {
   }
 }
 
-.box-artigo .profile .autor img {
+.swiper-depoimentos .box-artigo .profile .autor img {
   width: 12rem;
   height: 12rem;
   margin-left: 2rem;
@@ -2104,48 +2104,48 @@ ul li .descr::before {
 }
 
 @media screen and (max-width: 768px) {
-  .box-artigo .profile .autor {
+  .swiper-depoimentos .box-artigo .profile .autor {
     padding-top: 2rem;
   }
 
-  .box-artigo .text-content {
+  .swiper-depoimentos .box-artigo .text-content {
     padding-bottom: 2rem;
   }
 }
 
-.box-artigo .text-content {
+.swiper-depoimentos .box-artigo .text-content {
   display: flex;
   flex-direction: column;
   padding: 3rem 4rem;
 }
 
 @media screen and (max-width: 768px) {
-  .box-artigo .text-content {
+  .swiper-depoimentos .box-artigo .text-content {
     padding: 0.5rem;
   }
 }
 
-.box-artigo .text-content .bi-quote {
+.swiper-depoimentos .box-artigo .text-content .bi-quote {
   font-size: 4rem;
   color: var(--color-destaque1);
 }
 
 @media screen and (max-width: 768px) {
-  .box-artigo .text-content .bi-quote {
+  .swiper-depoimentos .box-artigo .text-content .bi-quote {
     font-size: 2rem;
   }
 }
 
-.box-artigo .text-content .bi-quote:first-child {
+.swiper-depoimentos .box-artigo .text-content .bi-quote:first-child {
   align-self: flex-start;
 }
 
-.box-artigo .text-content .bi-quote:last-child {
+.swiper-depoimentos .box-artigo .text-content .bi-quote:last-child {
   align-self: flex-end;
   transform: rotate(180deg);
 }
 
-.box-artigo .text-content .text {
+.swiper-depoimentos .box-artigo .text-content .text {
   color: var(--color-white);
   display: flex;
   flex-direction: column;
@@ -2155,29 +2155,29 @@ ul li .descr::before {
 }
 
 @media screen and (max-width: 768px) {
-  .box-artigo .text-content .text {
+  .swiper-depoimentos .box-artigo .text-content .text {
     margin: 0.5rem;
   }
 }
 
-.box-artigo .text-content .text p {
+.swiper-depoimentos .box-artigo .text-content .text p {
   font-size: 2rem;
   margin-bottom: 2rem;
 }
 
 @media screen and (max-width: 768px) {
-  .box-artigo .text-content .text p {
+  .swiper-depoimentos .box-artigo .text-content .text p {
     font-size: 1rem;
   }
 }
 
-.box-artigo .text-content .text h5 {
+.swiper-depoimentos .box-artigo .text-content .text h5 {
   font-style: italic;
   font-size: 1.5rem;
   margin-bottom: 0.25rem;
 }
 
-.box-artigo .text-content .text span {
+.swiper-depoimentos .box-artigo .text-content .text span {
   color: var(--color-gray2);
 }
 
@@ -2303,12 +2303,6 @@ ul li .descr::before {
 .card-about:nth-of-type(3) .image-container {
   background-image: url("/assets/img/logos/soleil.png");
 }
-.card-about:nth-of-type(4) .image-container {
-  background-image: url("https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
-}
-.card-about:nth-of-type(5) .image-container {
-  background-image: url("https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg");
-}
 
 .image-container {
   width: 8em;
@@ -2335,4 +2329,121 @@ ul li .descr::before {
   position: absolute;
   top: calc(-10% - 3px);
   left: calc(-10% - 3px);
+}
+
+/****GALLERY****/
+.gallery {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.gallery h2 {
+  font-size: 3rem;
+  font-family: var(--font-grande);
+  color: var(--color-white);
+  padding: 3rem 0;
+  max-width: 50%;
+  text-align: center;
+}
+
+.card-container-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media screen and (max-width: 1070px) {
+  .card-container-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery h2 {
+    font-size: 2.5rem;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card-container-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery h2 {
+    font-size: 2rem;
+  }
+}
+
+.gallery .ticket {
+  max-width: 350px;
+  overflow: hidden;
+  border-radius: 1.3rem;
+  background-color: #ffffff;
+  display: none;
+  transition: opacity 0.5s ease, height 0.5s ease, transform 0.5s ease;
+}
+
+.gallery .ticket:nth-child(-n + 3) {
+  display: block;
+}
+.gallery .ticket .image {
+  position: relative;
+  width: 100%;
+  height: 29rem;
+  margin-bottom: 3rem;
+}
+
+.gallery .ticket .image img {
+  width: 100%;
+  height: 20rem;
+}
+
+.gallery.ticket .info {
+  padding: 3rem 2rem;
+}
+.gallery .ticket .info span {
+  font-weight: 700;
+  font-size: 2.6rem;
+  line-height: 3.2rem;
+  color: var(--color-white);
+}
+.gallery .ticket .info ul {
+  margin-top: 2rem;
+  padding: 0 0.5rem;
+}
+.gallery .ticket .info ul li {
+  text-align: center;
+}
+
+.gallery .ticket .info ul li:nth-child(2) {
+  text-align: start;
+  padding: 0.5rem 1.5rem;
+}
+.gallery .ticket .info ul li strong {
+  color: var(--color-black);
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.gallery .ticket .info ul li:nth-child(2) strong {
+  font-weight: normal;
+}
+
+#toggleBtn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #e8920f;
+  color: var(--color-black);
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+#toggleBtn:hover {
+  background-color: #d38700;
 }

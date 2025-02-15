@@ -442,5 +442,6 @@
 		"vidas",
 		"violão",
 		"zeólitas"
-	]
+	],
+	"liveServer.settings.port": 5501
 }
