@@ -37,7 +37,7 @@ Uma landing page moderna e responsiva construída com HTML, CSS e JavaScript.
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seuusuario/landing-page.git
+   git clone https://github.com/seuusuario/landing-page-gustavo.git
    ```
 2. Acesse o diretório do projeto:
    ```bash
